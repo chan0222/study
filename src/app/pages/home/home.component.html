@@ -4,8 +4,10 @@
 </div>
 @for (todo of todos; track todo.id) {
 <ul>
+  <input type="checkbox" [(ngModel)]="todo.done" />
+
   <li>
-    {{ todo.title }}
+    <p>{{ todo.title }}</p>
     <button (clkick)="remove(todo)">삭제하기</button>
   </li>
 </ul>

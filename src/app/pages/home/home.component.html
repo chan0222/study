@@ -1,1 +1,12 @@
-<p>home works!</p>
+<div>
+  <input type="text" placeholder="입력" [(ngModel)]="inputValue" />
+  <button (click)="addtodo()">추가하기</button>
+</div>
+@for (todo of todos; track todo.id) {
+<ul>
+  <li>
+    {{ todo.title }}
+    <button (clkick)="remove(todo)">삭제하기</button>
+  </li>
+</ul>
+}
